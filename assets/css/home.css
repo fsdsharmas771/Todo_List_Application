@@ -5,6 +5,8 @@ body{
 #main-heading{
     text-align: center;
 }
+
+/* form styling */
 form{
     display: flex;
     flex-direction: column;
@@ -55,6 +57,8 @@ select:focus{
 .form-block input:focus{
     outline: none;
 }
+
+/* buttons */
 #btn{
     display: flex;
     justify-content: space-around;
@@ -69,18 +73,24 @@ select:focus{
     width: 100px;
     cursor: pointer;
 }
+
+/* add button */
 #add-task{
     background-color: green;
     color: white;
     border: none;
     border-radius: 10%;
 }
+
+/* delete button  */
 #delete-task{
     background-color: red;
     color: white;
     border: none;
     border-radius: 10%;
 }
+
+/* todo list styling */
 .list-item{
     padding: 4px;
     border-top: solid 2px rgb(96, 94, 94);
@@ -100,6 +110,7 @@ select:focus{
 .check-box{
     width: 10%;
 }
+/* date discription styling */
 .dis-date{
     width: 90%;
     color: rgb(191, 178, 178);
@@ -110,8 +121,12 @@ select:focus{
     color: rgb(109, 107, 107);
     font-size: 15px;
 }
+/* category box in todo list styling */
 .cat-egory{
     width: 20%;
     text-align: center;
     border: solid black 1px;
+}
+.linethrough-colourchange{
+    text-decoration: line-through;
 }

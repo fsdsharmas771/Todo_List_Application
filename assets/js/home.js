@@ -1,6 +1,8 @@
 let category = document.querySelectorAll('.cat-egory');
 let checkbox = document.querySelectorAll('.cb');
 let deletebtn = document.getElementById('db');
+let disc = document.getElementsByClassName('disc');
+console.log(disc[0]);
 let checked = false;
 for(let i=0;i<category.length;i++){
     if(category[i].innerText=='Work'){
@@ -20,9 +22,11 @@ for(let i =0;i<checkbox.length;i++){
     checkbox[i].addEventListener('click',function(){
         if(checked==false){
             deletebtn.href = `/delete/delete_todo/?id=${atr}`// to change the href of anchor tag having dlt btn
+            disc[i].classList.add('linethrough-colourchange');
             checked=true;
         }else{
             deletebtn.href = '';
+            disc[i].classList.remove('linethrough-colourchange');
             checked=false;
         }
         

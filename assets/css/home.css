@@ -1,6 +1,6 @@
 body{
     font-family: sans-serif;
-    background: linear-gradient(90deg,#efefef,#ffff);
+    background-color: bisque;
 }
 #main-heading{
     text-align: center;
@@ -18,7 +18,7 @@ form{
     flex-direction: column; */
     border-top: solid rgb(129, 129, 129) 5px;
     border-bottom: solid rgb(129, 129, 129) 5px;
-    width:520px;
+    width:513px;
 }
 #discription textarea{
     width:60%;
@@ -33,7 +33,7 @@ form{
     align-items: center;
     padding: 4px;
     border-bottom: solid rgb(129, 129, 129) 5px;
-    width:520px;
+    width:513px;
     height: 65px;
 }
 .form-block{
@@ -61,7 +61,7 @@ select:focus{
     align-items: center;
     padding: 4px;
     border-bottom: solid rgb(129, 129, 129) 5px;
-    width:520px;
+    width:513px;
     height: 65px;
 }
 #btn button{
@@ -80,4 +80,38 @@ select:focus{
     color: white;
     border: none;
     border-radius: 10%;
+}
+.list-item{
+    padding: 4px;
+    border-top: solid 2px rgb(96, 94, 94);
+    border-bottom: solid 2px rgb(96, 94, 94);
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: #ffff;
+    width:517px;
+    margin-left: 325px;
+    margin-top: 2px;
+}
+.list-item:hover{
+    background-color: #efefef;
+    cursor: pointer;
+}
+.check-box{
+    width: 10%;
+}
+.dis-date{
+    width: 90%;
+    color: rgb(191, 178, 178);
+    font-size: 10px;
+}
+.dis-date .disc{
+    margin-bottom: 0px;
+    color: rgb(109, 107, 107);
+    font-size: 15px;
+}
+.cat-egory{
+    width: 20%;
+    text-align: center;
+    border: solid black 1px;
 }

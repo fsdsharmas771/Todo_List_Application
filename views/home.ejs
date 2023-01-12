@@ -8,12 +8,13 @@
     <title>
         <%=title%>
     </title>
+    <script src="https://kit.fontawesome.com/5bd46391e5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/home.css">
 </head>
 
 <body>
     <h1 id="main-heading">TODO App</h1>
-    <form>
+    <form action="/create/newtodo" method="post">
         <span id="discription" class="form-block">
             <label for="dis">DISCRIPTION</label>
             <textarea name="discription" id="dis" placeholder="What do you need to do ?" cols="30" rows="3"></textarea>
@@ -32,14 +33,33 @@
             </span>
             <span class="form-block">
                 <label for="date">DATE</label>
-                <input type="date" id="date">
+                <input type="date" id="date" name="date">
             </span>
         </span>
         <span id="btn">
-            <button type="button" id="add-task"><b>+</b> Add task</button>
+            <button type="submit" id="add-task"><b>+</b> Add task</button>
             <button type="button" id="delete-task">Delete Task</button>
         </span>
     </form>
+    <div>
+        <ul id="todo-list">
+            <% for (let i of todo_list){%>
+                <li class="list-item">
+                    <div class="check-box" >
+                        <input type="checkbox" id='<%=i._id %>'>
+                    </div>
+                    <div class="dis-date">
+                        <p class="disc"><%= i.discription%></p>
+                        <p style="margin-top: 0px;"><i class="fa-regular fa-calendar-days">&nbsp;&nbsp;</i><%= i.date%></p>
+                    </div>
+                    <div class="cat-egory">
+                        <%= i.category%>
+                    </div>
+                </li>
+                <%}%>
+        </ul>
+    </div>
+    <script src="/js/home.js"></script>
 </body>
 
 </html>

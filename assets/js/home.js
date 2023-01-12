@@ -1,4 +1,7 @@
 let category = document.querySelectorAll('.cat-egory');
+let checkbox = document.querySelectorAll('.cb');
+let deletebtn = document.getElementById('db');
+let checked = false;
 for(let i=0;i<category.length;i++){
     if(category[i].innerText=='Work'){
         category[i].style.background='red';
@@ -11,4 +14,17 @@ for(let i=0;i<category.length;i++){
     }else{
         category[i].style.background='orange';
     }
+}
+for(let i =0;i<checkbox.length;i++){
+    let atr = checkbox[i].dataset.info ;
+    checkbox[i].addEventListener('click',function(){
+        if(checked==false){
+            deletebtn.href = `/delete/delete_todo/?id=${atr}`// to change the href of anchor tag having dlt btn
+            checked=true;
+        }else{
+            deletebtn.href = '';
+            checked=false;
+        }
+        
+    })
 }

@@ -38,7 +38,7 @@
         </span>
         <span id="btn">
             <button type="submit" id="add-task"><b>+</b> Add task</button>
-            <button type="button" id="delete-task">Delete Task</button>
+            <a href="/delete/delete_todo" id="db"><button type="button" id="delete-task">Delete Task</button></a>
         </span>
     </form>
     <div>
@@ -46,7 +46,7 @@
             <% for (let i of todo_list){%>
                 <li class="list-item">
                     <div class="check-box" >
-                        <input type="checkbox" id='<%=i._id %>'>
+                        <input type="checkbox" class="cb" data-info='<%=i._id %>'>
                     </div>
                     <div class="dis-date">
                         <p class="disc"><%= i.discription%></p>
